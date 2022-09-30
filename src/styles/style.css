@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/images/BG_red.webp');
+    font-family: 'Austral-Sans_Stamp-Regular';
+    color: var(--color-white);
+    padding: 0;
+    margin: 0;
+}

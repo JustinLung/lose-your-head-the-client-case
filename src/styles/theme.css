@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Austral-Sans_Stamp-Light';
+    src: url('assets/fonts/Austral-Sans_Stamp-Light.otf');
+}
+
+@font-face {
+    font-family: 'Austral-Sans_Stamp-Thin';
+    src: url('assets/fonts/Austral-Sans_Stamp-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Austral-Sans_Stamp-Regular';
+    src: url('assets/fonts/Austral-Sans_Stamp-Regular.otf');
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    padding: 0;
+    margin: 0;
+}
