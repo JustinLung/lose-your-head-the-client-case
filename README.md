@@ -1,38 +1,46 @@
-# create-svelte
+# 🍸 Ilojo Bar
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## 📚 Inhoudsopgave
+  * [Beschrijving](#beschrijving)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Gebruik](#gebruik)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
 
-## Creating a project
+## 📃 Beschrijving
+Dit is de repository, voor de Ilojo Bar story overzichtspagina component. Hierbij worden er verschillende verhalen getoond in een lijst met behulp van Prismic.io.
 
-If you're seeing this, you've probably already done this step. Congrats!
+[🌐 Live](https://lose-your-head-the-client-case-iq3flgnp1-justinlung.vercel.app/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## 🔮 Kenmerken
+* 📙 HTML
+* 📘 CSS
+* 🚀 Typescript
+* 🍊 Sveltekit
+* 📐 Prismic.io
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## ⚡ Installatie & Gebruik
+```
+# Cloning the repository
+git clone git@github.com:JustinLung/lose-your-head-the-client-case.git
+
+# Moving to the folder
+cd lose-your-head-the-client-case
+
+# Install NPM packages
+npm install
+
+# Run local server
+npm run start
 ```
 
-## Developing
+## Bronnen
+- [Sveltekit](https://kit.svelte.dev/)
+- [Prismic](https://prismic.io/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Licentie
 
-```bash
-npm run dev
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This work is licensed under [GNU GPLv3](./LICENSE).
