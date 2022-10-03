@@ -16,9 +16,17 @@
 :root {
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-red: #8c0500;
+    --color-light-red: #da2a2a;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     padding: 0;
     margin: 0;
 }

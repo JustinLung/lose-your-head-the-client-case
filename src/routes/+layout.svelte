@@ -4,17 +4,33 @@
 	import Header from '$lib/components/Header.svelte';
 </script>
 
-<Header />
+<Header>
+	<a href="/" class="header__nav--link">Home</a>
+	<a href="/" class="header__nav--link">About</a>
+	<a href="/" class="header__nav--link">Contact</a>
+</Header>
 <main>
 	<slot />
 </main>
 
 <style>
 	main {
-		padding: 2rem 5rem;
+		max-width: 80rem;
+		margin: 0 auto;
 	}
 
-	@media (max-width: 50rem) {
+	a {
+		position: relative;
+		color: var(--color-white);
+		text-decoration: none;
+		padding: 0.5rem 0;
+	}
+
+	a:hover {
+		color: var(--color-light-red);
+	}
+
+	@media (max-width: 80rem) {
 		main {
 			padding: 2rem 1rem;
 		}
