@@ -4,7 +4,7 @@
 	export let storyLink: string;
 </script>
 
-<div class="story">
+<article class="story">
 	<a href={storyLink} class="story__link">
 		<figure class="frame">
 			<img src={storyImage} alt={storyTitle} class="frame__image" />
@@ -14,7 +14,7 @@
 			<h3 class="gold-plate__title">{storyTitle}</h3>
 		</div>
 	</a>
-</div>
+</article>
 
 <style>
 	.story {
