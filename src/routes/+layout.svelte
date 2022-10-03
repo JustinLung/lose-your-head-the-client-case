@@ -2,6 +2,7 @@
 	import '../styles/style.css';
 	import '../styles/theme.css';
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Header>
@@ -12,11 +13,13 @@
 <main>
 	<slot />
 </main>
+<Footer />
 
 <style>
 	main {
 		max-width: 80rem;
 		margin: 0 auto;
+		padding: 2rem 0;
 	}
 
 	a {
