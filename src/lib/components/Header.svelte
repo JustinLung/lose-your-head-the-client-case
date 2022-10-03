@@ -76,7 +76,11 @@
 		background-color: var(--color-white);
 		border-radius: 6px;
 		transform-origin: 0 0;
-		transition: 0.4s;
+		transition: 0.3s;
+	}
+
+	.header__menu:hover .header__menu-line:last-child {
+		width: 70%;
 	}
 
 	@media (max-width: 80rem) {
