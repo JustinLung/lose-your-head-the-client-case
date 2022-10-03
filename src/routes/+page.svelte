@@ -5,4 +5,5 @@
 <Story
 	storyTitle="A Spanish migrant looking for greener pastures"
 	storyImage="/assets/images/placeholder.jpg"
+	storyLink="/"
 />
