@@ -30,7 +30,7 @@
 		justify-content: space-between;
 		max-width: 80rem;
 		margin: 0 auto;
-		padding: 2rem 0;
+		padding: 2rem 0 0;
 	}
 
 	.header__nav {
@@ -81,7 +81,7 @@
 
 	@media (max-width: 80rem) {
 		.header {
-			padding: 2rem 1rem;
+			padding: 2rem 1rem 0;
 		}
 
 		.header__link__image {
