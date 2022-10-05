@@ -26,6 +26,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		box-shadow: var(--box-shadow);
 		margin: 0;
 		aspect-ratio: 127/155;
 		position: relative;

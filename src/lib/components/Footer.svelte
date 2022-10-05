@@ -3,7 +3,7 @@
 <style>
 	footer {
 		max-width: 80rem;
-		margin: 0 auto;
+		margin: 0 auto 2rem;
 	}
 
 	@media (max-width: 80rem) {

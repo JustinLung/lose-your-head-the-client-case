@@ -1,9 +1,17 @@
 <script lang="ts">
+	import StorySection from '$lib/components/StorySection.svelte';
 	import Story from '$lib/components/Story.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
-<Story
-	storyTitle="A Spanish migrant looking for greener pastures"
-	storyImage="/assets/images/placeholder.jpg"
-	storyLink="/"
-/>
+<StorySection>
+	{#each data.stories as story}
+		<Story
+			storyTitle={story.title}
+			storyImage={story.thumbnail.url}
+			storyLink="stories/{story.id}"
+		/>
+	{/each}
+</StorySection>
