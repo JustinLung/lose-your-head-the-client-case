@@ -6,6 +6,9 @@ export const load: PageServerLoad = async ({ params }) => {
     query Story($id: ID) {
         story(where: {id: $id}) {
             title
+            createdBy {
+                name
+            }
             content {
                 html
             }

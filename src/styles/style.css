@@ -3,7 +3,9 @@
 }
 
 body {
-    background-image: url('/assets/images/bg-red.webp');
+    background-image: url('/assets/images/bg-red.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Austral-Sans_Stamp-Regular';
     color: var(--color-white);
     padding: 0;
