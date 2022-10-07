@@ -42,6 +42,7 @@ npm run start
 - [Sveltekit](https://kit.svelte.dev/)
 - [Hygraph](https://hygraph.com/)
 - [GSAP](https://greensock.com/)
+- [Prototype van Jeany en Jorn](https://github.com/jornveltrop/ilojo-bar)
 
 ## Licentie
 
