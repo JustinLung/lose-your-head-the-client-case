@@ -2,33 +2,58 @@
 	export let storyTitle: string = 'Story Image';
 	export let storyImage: string;
 	export let storyLink: string;
+	import { onMount } from 'svelte';
+
+	let top: number;
+	let delay: number;
+
+	top = Math.random() * 15;
+	delay = Math.random() * 250;
+
+	const swing = Math.round(Math.random()) ? 'alternate' : 'alternate-reverse';
+
+	console.log(swing);
 </script>
 
-<article class="story">
-	<a href={storyLink} class="story__link">
-		<figure class="frame">
-			<div class="frame-content">
-				<img src={storyImage} alt={storyTitle} class="frame__image" />
+{#if top && delay}
+	<article class="story" style="--top: {top}rem; --delay: {250}ms; --swing: {swing}">
+		<a href={storyLink} class="story__link">
+			<figure class="frame">
+				<div class="frame-content">
+					<img src={storyImage} alt={storyTitle} class="frame__image" />
+				</div>
+			</figure>
+			<div class="title-plate">
+				<h3 class="title-plate__title">{storyTitle}</h3>
 			</div>
-		</figure>
-		<div class="gold-plate">
-			<img src="/assets/images/gold-title.png" alt="Gold Plate" class="gold-plate__image" />
-			<h3 class="gold-plate__title">{storyTitle}</h3>
-		</div>
-	</a>
-</article>
+		</a>
+	</article>
+{/if}
 
 <style>
 	.story {
-		max-width: 25rem;
+		max-width: 20rem;
 		width: 100%;
+		margin: var(--top) 0 0;
+		animation: swing ease-in-out 2s var(--swing) infinite;
+		animation-delay: var(--delay);
+		transform-origin: top center;
 	}
+
+	@keyframes swing {
+		0% {
+			transform: rotate(1.75deg);
+		}
+		100% {
+			transform: rotate(-1.75deg);
+		}
+	}
+
 	.frame {
 		background-image: url('/assets/images/window_bg.webp');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		box-shadow: var(--box-shadow);
 		margin: 0;
 		aspect-ratio: 354/525;
 		position: relative;
@@ -53,32 +78,37 @@
 		z-index: -1;
 	}
 
-	.gold-plate {
+	.title-plate {
 		position: relative;
-		margin: 0.5rem 0 0;
+		margin: 0.5rem auto 0;
+		width: 70%;
+		border-radius: 0.7rem;
+		height: 5rem;
+		filter: contrast(110%) brightness(100%);
+		background: linear-gradient(40deg, rgba(195, 165, 128, 1), rgba(0, 0, 0, 0)),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		color: var(--color-white);
+		box-shadow: var(--box-shadow);
 	}
 
-	.gold-plate__title {
+	.title-plate__title {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		color: var(--color-black);
+		color: var(--color-white);
 		max-width: 20rem;
 		font-size: 1rem;
-	}
-
-	.gold-plate__image {
-		position: relative;
-		left: 50%;
-		width: 80%;
-		transform: translateX(-50%);
 	}
 
 	@media (max-width: 40rem) {
 		.frame {
 			margin: 0 auto;
+		}
+
+		.story {
+			margin: 1rem 0;
 		}
 	}
 </style>

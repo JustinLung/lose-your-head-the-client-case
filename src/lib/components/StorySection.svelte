@@ -14,20 +14,13 @@
 
 	div {
 		display: flex;
-		flex-direction: row;
-		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 1rem;
 	}
 
 	@media (max-width: 50rem) {
 		h1 {
 			font-size: 2rem;
-		}
-
-		div {
-			flex-direction: column;
 		}
 	}
 </style>
