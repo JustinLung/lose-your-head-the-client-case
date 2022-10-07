@@ -3,12 +3,16 @@
 	import '../styles/theme.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <Header>
 	<a href="/" class="header__nav--link">Home</a>
-	<a href="/" class="header__nav--link">About</a>
-	<a href="/" class="header__nav--link">Contact</a>
+	{#each data.stories as story}
+		<a href="stories/{story.id}" class="header__nav--link">{story.title}</a>
+	{/each}
 </Header>
 <main>
 	<slot />
@@ -26,7 +30,7 @@
 		position: relative;
 		color: var(--color-white);
 		text-decoration: none;
-		padding: 0.5rem 0;
+		font-size: 1.5rem;
 	}
 
 	a:hover {

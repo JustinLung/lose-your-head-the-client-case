@@ -11,7 +11,7 @@
 		<Story
 			storyTitle={story.title}
 			storyImage={story.thumbnail.url}
-			storyLink="stories/{story.id}"
+			storyLink="/stories/{story.id}"
 		/>
 	{/each}
 </StorySection>
