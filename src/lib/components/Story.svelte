@@ -7,7 +7,9 @@
 <article class="story">
 	<a href={storyLink} class="story__link">
 		<figure class="frame">
-			<img src={storyImage} alt={storyTitle} class="frame__image" />
+			<div class="frame-content">
+				<img src={storyImage} alt={storyTitle} class="frame__image" />
+			</div>
 		</figure>
 		<div class="gold-plate">
 			<img src="/assets/images/gold-title.png" alt="Gold Plate" class="gold-plate__image" />
@@ -22,29 +24,33 @@
 		width: 100%;
 	}
 	.frame {
-		background-image: url('/assets/images/image-frame.png');
+		background-image: url('/assets/images/window_bg.webp');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
 		box-shadow: var(--box-shadow);
 		margin: 0;
-		aspect-ratio: 127/155;
+		aspect-ratio: 354/525;
 		position: relative;
 		overflow: hidden;
 		max-width: 25rem;
 	}
 
-	.frame__image {
+	.frame-content {
+		width: 71%;
+		height: 51%;
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 70%;
+		left: 51%;
 		transform: translate(-50%, -50%);
-		width: 95%;
-		height: 95%;
-		object-fit: cover;
-		aspect-ratio: 127/155;
 		z-index: -1;
-		position: relative;
+	}
+
+	.frame__image {
+		width: 100%;
+		object-fit: cover;
+		aspect-ratio: 244/261;
+		z-index: -1;
 	}
 
 	.gold-plate {
