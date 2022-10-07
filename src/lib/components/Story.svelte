@@ -2,20 +2,13 @@
 	export let storyTitle: string = 'Story Image';
 	export let storyImage: string;
 	export let storyLink: string;
-	import { onMount } from 'svelte';
 
-	let top: number;
-	let delay: number;
-
-	top = Math.random() * 15;
-	delay = Math.random() * 250;
+	let top: number = Math.random() * 15;
 
 	const swing = Math.round(Math.random()) ? 'alternate' : 'alternate-reverse';
-
-	console.log(swing);
 </script>
 
-{#if top && delay}
+{#if top}
 	<article class="story" style="--top: {top}rem; --delay: {250}ms; --swing: {swing}">
 		<a href={storyLink} class="story__link">
 			<figure class="frame">
