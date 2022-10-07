@@ -13,10 +13,5 @@
 			storyImage={story.thumbnail.url}
 			storyLink="stories/{story.id}"
 		/>
-		<Story
-			storyTitle={story.title}
-			storyImage={story.thumbnail.url}
-			storyLink="stories/{story.id}"
-		/>
 	{/each}
 </StorySection>
