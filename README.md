@@ -20,6 +20,7 @@ Dit is de repository, voor de Ilojo Bar story overzichtspagina component. Hierbi
 * 🚀 Typescript
 * 🍊 Sveltekit
 * 📐 Hygraph
+* 🧦 GSAP
 * ⚛️ GraphQL
 
 ## ⚡ Installatie & Gebruik
@@ -40,6 +41,7 @@ npm run start
 ## Bronnen
 - [Sveltekit](https://kit.svelte.dev/)
 - [Hygraph](https://hygraph.com/)
+- [GSAP](https://greensock.com/)
 
 ## Licentie
 
