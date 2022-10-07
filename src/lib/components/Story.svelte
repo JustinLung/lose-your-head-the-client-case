@@ -20,11 +20,11 @@
 		<a href={storyLink} class="story__link">
 			<figure class="frame">
 				<div class="frame-content">
-					<img src={storyImage} alt={storyTitle} class="frame__image" />
+					<img src={storyImage} alt={storyTitle} class="frame__image" width="244" height="250" />
 				</div>
 			</figure>
 			<div class="title-plate">
-				<h3 class="title-plate__title">{storyTitle}</h3>
+				<h2 class="title-plate__title">{storyTitle}</h2>
 			</div>
 		</a>
 	</article>

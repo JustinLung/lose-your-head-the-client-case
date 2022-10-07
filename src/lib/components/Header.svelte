@@ -9,6 +9,8 @@
 			src="/assets/images/logo-ilojo-bar.webp"
 			alt="Logo Ilojo Bar"
 			class="header__link__image"
+			width="128"
+			height="45"
 		/>
 	</a>
 	{#if isActive}
@@ -16,7 +18,7 @@
 			<slot />
 		</nav>
 	{/if}
-	<button class="header__menu" on:click={() => (isActive = !isActive)}>
+	<button aria-label="menu" class="header__menu" on:click={() => (isActive = !isActive)}>
 		<span class="header__menu-line" />
 		<span class="header__menu-line" />
 	</button>
