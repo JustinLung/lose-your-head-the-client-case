@@ -9,6 +9,9 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Ilojo Bar</title>
+</svelte:head>
 <Header>
 	<a href="/" class="header__nav--link">Home</a>
 	{#each data.stories as story}
