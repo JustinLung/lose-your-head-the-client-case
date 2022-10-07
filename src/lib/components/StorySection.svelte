@@ -1,3 +1,16 @@
+<script lang="ts">
+	import gsap from 'gsap';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		gsap.fromTo(
+			'h1',
+			{ opacity: 0, y: -50 },
+			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
+		);
+	});
+</script>
+
 <section>
 	<h1>Discover Untold Stories</h1>
 	<div>
@@ -8,8 +21,8 @@
 <style>
 	h1 {
 		font-size: 3rem;
-		margin: 2rem 0;
 		text-align: center;
+		opacity: 0;
 	}
 
 	div {
@@ -21,6 +34,7 @@
 	@media (max-width: 50rem) {
 		h1 {
 			font-size: 2rem;
+			margin-top: 1rem;
 		}
 	}
 </style>

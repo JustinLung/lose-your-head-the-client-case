@@ -1,4 +1,7 @@
 <script lang="ts">
+	import gsap from 'gsap';
+	import { onMount } from 'svelte';
+
 	export let storyTitle: string = 'Story Image';
 	export let storyImage: string;
 	export let storyLink: string;
@@ -6,6 +9,10 @@
 	let top: number = Math.random() * 15;
 
 	const swing = Math.round(Math.random()) ? 'alternate' : 'alternate-reverse';
+
+	onMount(() => {
+		gsap.to('.story', { duration: 1, opacity: 1, stagger: 0.3, delay: 0.5 });
+	});
 </script>
 
 {#if top}
@@ -24,6 +31,10 @@
 {/if}
 
 <style>
+	.story__link {
+		text-decoration: none;
+	}
+
 	.story {
 		max-width: 20rem;
 		width: 100%;
@@ -31,6 +42,7 @@
 		animation: swing ease-in-out 2s var(--swing) infinite;
 		animation-delay: var(--delay);
 		transform-origin: top center;
+		opacity: 0;
 	}
 
 	@keyframes swing {
@@ -82,17 +94,16 @@
 			url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 		color: var(--color-white);
 		box-shadow: var(--box-shadow);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.title-plate__title {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		color: var(--color-white);
-		max-width: 20rem;
 		font-size: 1rem;
+		text-decoration: none;
+		text-align: center;
 	}
 
 	@media (max-width: 40rem) {
