@@ -1,4 +1,5 @@
 <script lang="ts">
+	// import { onMount } from 'svelte/types/runtime/internal/lifecycle';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -14,8 +15,12 @@
 </section>
 
 <style>
+	section {
+		max-width: 40rem;
+		margin: 0 auto;
+	}
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.author {
@@ -24,17 +29,18 @@
 		padding: 1rem 0;
 	}
 
-	:global(p) {
-		max-width: 40rem;
-	}
-
 	div {
-		max-width: 80rem;
 		font-size: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	:global(img) {
-		padding: 1rem 0;
-		max-width: 80rem;
+		width: 100%;
+		height: 50%;
+		margin: 1.5rem 0;
+		border-radius: 0.5rem;
 	}
 </style>

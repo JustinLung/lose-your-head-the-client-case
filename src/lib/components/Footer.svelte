@@ -3,12 +3,13 @@
 <style>
 	footer {
 		max-width: 80rem;
-		margin: 0 auto 2rem;
+		margin: 2rem auto 2rem;
 	}
 
 	@media (max-width: 80rem) {
 		footer {
-			padding: 0 1rem;
+			text-align: center;
+			padding-bottom: 1.5rem;
 		}
 	}
 </style>
