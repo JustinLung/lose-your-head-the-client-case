@@ -1,4 +1,5 @@
 # 🍸 Ilojo Bar
+![Ilojo Bar Mockup](https://github.com/JustinLung/lose-your-head-the-client-case/blob/main/docs/mockup.png?raw=true)
 
 ## 📚 Inhoudsopgave
   * [Beschrijving](#beschrijving)
@@ -9,7 +10,7 @@
   * [Licentie](#licentie)
 
 ## 📃 Beschrijving
-Dit is de repository, voor de Ilojo Bar story overzichtspagina component. Hierbij worden er verschillende verhalen getoond in een lijst met behulp van Prismic.io.
+Dit is de repository, voor de Ilojo Bar story overzichtspagina component. Hierbij worden er verschillende verhalen getoond in een lijst met behulp van Hygraph.
 
 [🌐 Live](https://lose-your-head-the-client-case-iq3flgnp1-justinlung.vercel.app/)
 
@@ -18,7 +19,8 @@ Dit is de repository, voor de Ilojo Bar story overzichtspagina component. Hierbi
 * 📘 CSS
 * 🚀 Typescript
 * 🍊 Sveltekit
-* 📐 Prismic.io
+* 📐 Hygraph
+* ⚛️ GraphQL
 
 ## ⚡ Installatie & Gebruik
 ```
@@ -37,7 +39,7 @@ npm run start
 
 ## Bronnen
 - [Sveltekit](https://kit.svelte.dev/)
-- [Prismic](https://prismic.io/)
+- [Hygraph](https://hygraph.com/)
 
 ## Licentie
 
