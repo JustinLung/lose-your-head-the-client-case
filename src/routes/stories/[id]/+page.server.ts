@@ -1,0 +1,23 @@
+import type { PageServerLoad } from './$types';
+import { client } from '../../../vendors/utils';
+
+export const load: PageServerLoad = async ({ params }) => {
+	const query = `
+    query Story($id: ID) {
+        story(where: {id: $id}) {
+            title
+            createdBy {
+                name
+            }
+            content {
+                html
+            }
+        }
+    }
+    `;
+	const data = await client(query, { id: params.id });
+
+	return {
+		data
+	};
+};

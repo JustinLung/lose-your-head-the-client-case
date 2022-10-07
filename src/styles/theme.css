@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: 'Austral-Sans_Stamp-Thin';
-    src: url('assets/fonts/Austral-Sans_Stamp-Thin.otf');
+    src: url('/assets/fonts/Austral-Sans_Stamp-Thin.otf');
 }
 
 @font-face {
     font-family: 'Austral-Sans_Stamp-Regular';
-    src: url('assets/fonts/Austral-Sans_Stamp-Regular.otf');
+    src: url('/assets/fonts/Austral-Sans_Stamp-Regular.otf');
 }
 
 :root {
@@ -18,6 +18,9 @@
     --color-black: #000000;
     --color-red: #8c0500;
     --color-light-red: #da2a2a;
+    --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    ;
 }
 
 h1,
