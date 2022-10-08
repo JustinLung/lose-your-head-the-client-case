@@ -1,6 +1,5 @@
 <script lang="ts">
-	// import '../styles/style.css';
-	// import '../styles/theme.css';
+	import '../styles/style.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import BackToTop from '$lib/components/BackToTop.svelte';
@@ -10,9 +9,26 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="../src/styles/style.css" />
-	<link rel="stylesheet" href="../src/styles/theme.css" />
 	<title>Ilojo Bar</title>
+	<style>
+		@font-face {
+			font-family: 'Austral-Sans_Stamp-Regular';
+			font-display: swap;
+			src: url('/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+				url('/assets/fonts/AustralSansStamp-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		:root {
+			--color-white: #ffffff;
+			--color-black: #000000;
+			--color-red: #8c0500;
+			--color-light-red: #da2a2a;
+			--box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		}
+	</style>
 </svelte:head>
 <Header>
 	<a href="/" class="header__nav--link">Home</a>
