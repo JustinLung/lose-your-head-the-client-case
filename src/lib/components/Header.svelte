@@ -11,6 +11,7 @@
 			class="header__link__image"
 			width="128"
 			height="45"
+			loading="lazy"
 		/>
 	</a>
 	{#if isActive}

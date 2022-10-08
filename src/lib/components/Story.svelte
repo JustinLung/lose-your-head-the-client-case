@@ -20,7 +20,14 @@
 		<a href={storyLink} class="story__link">
 			<figure class="frame">
 				<div class="frame-content">
-					<img src={storyImage} alt={storyTitle} class="frame__image" width="244" height="250" />
+					<img
+						src={storyImage}
+						alt={storyTitle}
+						class="frame__image"
+						width="244"
+						height="250"
+						loading="lazy"
+					/>
 				</div>
 			</figure>
 			<div class="title-plate">

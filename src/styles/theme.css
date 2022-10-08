@@ -1,16 +1,11 @@
 @font-face {
-    font-family: 'Austral-Sans_Stamp-Light';
-    src: url('assets/fonts/Austral-Sans_Stamp-Light.otf');
-}
-
-@font-face {
-    font-family: 'Austral-Sans_Stamp-Thin';
-    src: url('/assets/fonts/Austral-Sans_Stamp-Thin.otf');
-}
-
-@font-face {
     font-family: 'Austral-Sans_Stamp-Regular';
-    src: url('/assets/fonts/Austral-Sans_Stamp-Regular.otf');
+    font-display: swap;
+    src: url('/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+        url('/assets/fonts/AustralSansStamp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
