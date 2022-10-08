@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '../styles/style.css';
-	import '../styles/theme.css';
+	// import '../styles/style.css';
+	// import '../styles/theme.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import BackToTop from '$lib/components/BackToTop.svelte';
@@ -10,6 +10,8 @@
 </script>
 
 <svelte:head>
+	<link rel="stylesheet" href="../src/styles/style.css" />
+	<link rel="stylesheet" href="../src/styles/theme.css" />
 	<title>Ilojo Bar</title>
 </svelte:head>
 <Header>
