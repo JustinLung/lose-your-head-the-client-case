@@ -11,28 +11,28 @@
 	});
 </script>
 
-<section>
-	<h1>Discover Untold Stories</h1>
-	<div>
+<section class="stories">
+	<h1 class="stories__title">Discover Untold Stories</h1>
+	<div class="stories__container">
 		<slot />
 	</div>
 </section>
 
 <style>
-	h1 {
+	.stories__title {
 		font-size: 3rem;
 		text-align: center;
 		opacity: 0;
 	}
 
-	div {
+	.stories__container {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 	}
 
 	@media (max-width: 50rem) {
-		h1 {
+		.stories__title {
 			font-size: 2rem;
 			margin-top: 1rem;
 		}

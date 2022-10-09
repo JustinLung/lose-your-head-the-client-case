@@ -8,13 +8,10 @@
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<title>Ilojo Bar</title>
-</svelte:head>
 <Header>
-	<a href="/" class="header__nav--link">Home</a>
+	<a href="/" class="nav-link">Home</a>
 	{#each data.stories as story}
-		<a href="stories/{story.id}" class="header__nav--link">{story.title}</a>
+		<a href="stories/{story.id}" class="nav-link">{story.title}</a>
 	{/each}
 </Header>
 <main>
@@ -30,14 +27,14 @@
 		padding: 2rem 0;
 	}
 
-	a {
+	.nav-link {
 		position: relative;
 		color: var(--color-white);
 		text-decoration: none;
 		font-size: 1.5rem;
 	}
 
-	a:hover {
+	.nav-link:hover {
 		color: var(--color-light-red);
 	}
 

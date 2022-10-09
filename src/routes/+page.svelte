@@ -4,7 +4,12 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+	const pageTitle = 'Stories';
 </script>
+
+<svelte:head>
+	<title>Ilojo Bar - {pageTitle}</title>
+</svelte:head>
 
 <StorySection>
 	{#each data.stories as story}

@@ -1,22 +1,26 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Button from '$lib/components/Button.svelte';
 </script>
 
-<section>
-	<h1>Whoops, Something went wrong.</h1>
+<section class="error">
+	<h1 class="error__title">Whoops, Something went wrong.</h1>
 	{#if $page.status === 404}
-		<p>The page you are looking for was moved, removed, renamed or might never exited</p>
-		<span>{$page.status}</span>
-		<a href="/">Go back to stories page</a>
+		<p class="error__message">
+			The page you are looking for was moved, removed, renamed or might never exited
+		</p>
+		<span class="error__status">{$page.status}</span>
+		<a href="/" class="error__link">Go back to stories page</a>
 	{:else}
-		<p>
+		<p class="error__message">
 			It looks like there is something wrong in our end. Please come back later to chack our status.
 		</p>
+		<span class="error__status">{$page.status}</span>
 	{/if}
 </section>
 
 <style>
-	section {
+	.error {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -26,39 +30,47 @@
 		min-height: 75vh;
 	}
 
-	h1 {
+	.error__title {
 		font-size: 2rem;
 	}
 
-	span {
+	.error__status {
 		font-size: 7rem;
 	}
 
-	p {
+	.error__message {
 		max-width: 30rem;
 		font-size: 1.2rem;
 	}
 
-	a {
+	.error__link {
+		border: none;
+		background: linear-gradient(40deg, rgba(195, 165, 128, 1), rgba(0, 0, 0, 0)),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 		color: var(--color-white);
-		font-size: 1.3rem;
+		box-shadow: var(--box-shadow);
+		border-radius: 0.7rem;
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
 		text-decoration: none;
 	}
 
-	a:hover {
-		text-decoration: underline;
+	.error__link:hover {
+		transform: scale(1.1);
 	}
 
 	@media (max-width: 50rem) {
-		section {
+		.error {
 			height: 60vh;
 		}
 
-		h1 {
+		.error__title {
 			font-size: 1.7rem;
 		}
 
-		p {
+		.error__message {
 			font-size: 1rem;
 		}
 	}

@@ -1,40 +1,56 @@
 <script lang="ts">
-	// import { onMount } from 'svelte/types/runtime/internal/lifecycle';
+	import Button from '$lib/components/Button.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 	const { story } = data.data;
 </script>
 
-<section>
-	<h1>{story.title}</h1>
-	<p class="author">Written By: {story.createdBy.name}</p>
-	<div>
+<svelte:head>
+	<title>Ilojo Bar - {story.title}</title>
+</svelte:head>
+
+<section class="story">
+	<h1 class="story__title">{story.title}</h1>
+	<p class="story__author">Written By: {story.createdBy.name}</p>
+	<div class="story__content">
 		{@html story.content.html}
+	</div>
+	<div class="story__buttons">
+		<Button>Previous Story</Button>
+		<Button>Next Story</Button>
 	</div>
 </section>
 
 <style>
-	section {
+	.story {
 		max-width: 40rem;
 		margin: 0 auto;
 	}
-	h1 {
+	.story__title {
 		font-size: 2.5rem;
 	}
 
-	.author {
+	.story__author {
 		font-size: 1.5rem;
 		font-weight: bold;
 		padding: 1rem 0;
 	}
 
-	div {
+	.story__content {
 		font-size: 1.2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.story__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin: 1.5rem 0 0;
 	}
 
 	:global(img) {

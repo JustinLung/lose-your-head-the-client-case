@@ -5,13 +5,13 @@
 
 <svelte:window bind:scrollY={y} />
 {#if y >= 80}
-	<a href="#" transition:slide>
-		<img src="/assets/images/arrow.png" alt="Scroll Back To Top" />
+	<a href="#" class="scroll-to-top-link" transition:slide>
+		<img src="/assets/images/arrow.png" alt="Scroll Back To Top" class="scroll-to-top-link__img" />
 	</a>
 {/if}
 
 <style>
-	a {
+	.scroll-to-top-link {
 		position: fixed;
 		bottom: 2.5em;
 		right: 2.5em;
@@ -24,7 +24,7 @@
 		align-items: center;
 	}
 
-	a > img {
+	.scroll-to-top-link__img {
 		width: 100%;
 	}
 </style>

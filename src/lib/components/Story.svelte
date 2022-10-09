@@ -18,13 +18,19 @@
 {#if top}
 	<article class="story" style="--top: {top}rem; --delay: {250}ms; --swing: {swing}">
 		<a href={storyLink} class="story__link">
-			<figure class="frame">
-				<div class="frame-content">
-					<img src={storyImage} alt={storyTitle} class="frame__image" width="244" height="250" />
+			<figure class="story__link__frame">
+				<div class="story__link__frame-content">
+					<img
+						src={storyImage}
+						alt={storyTitle}
+						class="story__link__frame-image"
+						width="244"
+						height="250"
+					/>
 				</div>
 			</figure>
-			<div class="title-plate">
-				<h2 class="title-plate__title">{storyTitle}</h2>
+			<div class="story__link__plate">
+				<h2 class="story__link__plate-title">{storyTitle}</h2>
 			</div>
 		</a>
 	</article>
@@ -54,7 +60,7 @@
 		}
 	}
 
-	.frame {
+	.story__link__frame {
 		background-image: url('/assets/images/window_bg.webp');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -66,7 +72,7 @@
 		max-width: 25rem;
 	}
 
-	.frame-content {
+	.story__link__frame-content {
 		width: 71%;
 		height: 51%;
 		position: absolute;
@@ -76,14 +82,14 @@
 		z-index: -1;
 	}
 
-	.frame__image {
+	.story__link__frame-image {
 		width: 100%;
 		object-fit: cover;
 		aspect-ratio: 244/261;
 		z-index: -1;
 	}
 
-	.title-plate {
+	.story__link__plate {
 		position: relative;
 		margin: 0.5rem auto 0;
 		width: 70%;
@@ -100,14 +106,14 @@
 		align-items: center;
 	}
 
-	.title-plate__title {
+	.story__link__plate-title {
 		font-size: 1rem;
 		text-decoration: none;
 		text-align: center;
 	}
 
 	@media (max-width: 40rem) {
-		.frame {
+		.story__link__frame {
 			margin: 0 auto;
 		}
 
