@@ -74,7 +74,7 @@
 	.header__menu-line {
 		display: block;
 		width: 100%;
-		height: 0.3rem;
+		height: 0.2rem;
 		margin-bottom: 5px;
 		position: relative;
 		background-color: var(--color-white);
