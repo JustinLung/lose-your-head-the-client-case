@@ -43,6 +43,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		gap: 1rem;
 	}
 
 	.story__buttons {
@@ -55,8 +56,7 @@
 
 	:global(img) {
 		width: 100%;
-		height: 50%;
-		margin: 1.5rem 0;
+		height: 100%;
 		border-radius: 0.5rem;
 	}
 </style>
