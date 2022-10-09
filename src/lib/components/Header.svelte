@@ -57,6 +57,7 @@
 
 	.header__link__image {
 		width: 10rem;
+		max-height: 45px;
 	}
 
 	.header__menu {
