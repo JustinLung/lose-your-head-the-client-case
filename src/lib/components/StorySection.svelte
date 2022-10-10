@@ -5,7 +5,7 @@
 	onMount(() => {
 		gsap.fromTo(
 			'h1',
-			{ opacity: 0, y: -50 },
+			{ opacity: 0, y: -60 },
 			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
 		);
 	});
