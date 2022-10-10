@@ -3,9 +3,32 @@
 	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 	import type { PageData } from './$types';
+	import { storyId } from '$lib/stores/store';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 	const { story } = data.data;
+
+	const currentId = $page.params.id;
+
+	function getPreviousAndNext(id: string) {
+		const currentIndex = $storyId.indexOf(id);
+		const next = currentIndex >= $storyId.length - 1 ? 0 : currentIndex + 1;
+		const previous = currentIndex - 1 < 0 ? $storyId.length - 1 : currentIndex - 1;
+		return [next, previous];
+	}
+
+	const [next, previous] = getPreviousAndNext(currentId);
+
+	function navigateToStory(index: number) {
+		const id = $storyId[index];
+		const url = `/stories/${id}`;
+		goto(url, { noscroll: false });
+		setTimeout(() => {
+			window.location.reload();
+		}, 300);
+	}
 
 	onMount(() => {
 		gsap.fromTo(
@@ -39,8 +62,8 @@
 		{@html story.content.html}
 	</div>
 	<div class="story__buttons">
-		<Button>Previous Story</Button>
-		<Button>Next Story</Button>
+		<Button on:click={() => navigateToStory(previous)}>Previous Story</Button>
+		<Button on:click={() => navigateToStory(next)}>Next Story</Button>
 	</div>
 </section>
 

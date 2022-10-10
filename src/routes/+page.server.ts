@@ -16,7 +16,7 @@ export const load: PageServerLoad = async () => {
         }
     }
 }`;
-	const data = await client(query);
+	const data = await client({ query, fetch: fetch });
 
 	return {
 		stories: data.stories

@@ -1,7 +1,13 @@
-import { HYPGRAPH_ENDPOINT } from '$env/static/private';
-
-export async function client(query: string, variables?: object) {
-	const response = await fetch(HYPGRAPH_ENDPOINT, {
+export async function client({
+	query,
+	variables,
+	fetch
+}: {
+	query: string;
+	variables?: object;
+	fetch?: any;
+}) {
+	const response = await fetch(import.meta.env.VITE_HYPGRAPH_ENDPOINT, {
 		method: 'POST',
 		body: JSON.stringify({ query, variables })
 	});
