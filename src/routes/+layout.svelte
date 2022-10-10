@@ -9,9 +9,9 @@
 </script>
 
 <Header>
-	<a href="/" class="nav-link">Home</a>
+	<a data-sveltekit-reload href="/" class="nav-link">Home</a>
 	{#each data.stories as story}
-		<a href="stories/{story.id}" class="nav-link">{story.title}</a>
+		<a data-sveltekit-reload href="/stories/{story.id}" class="nav-link">{story.title}</a>
 	{/each}
 </Header>
 <main>
