@@ -22,7 +22,6 @@
 	.stories__title {
 		font-size: 3rem;
 		text-align: center;
-		opacity: 0;
 	}
 
 	.stories__container {

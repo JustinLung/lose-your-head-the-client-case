@@ -25,18 +25,24 @@
 			{ opacity: 0, y: -50 },
 			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
 		);
-		gsap.to('.story__author', {
-			duration: 1,
-			opacity: 1,
-			stagger: 0.3,
-			delay: 0.5
-		});
-		gsap.to('.story__content', {
-			duration: 1,
-			opacity: 1,
-			stagger: 0.3,
-			delay: 0.8
-		});
+		gsap.fromTo(
+			'.story__author',
+			{ opacity: 0 },
+			{
+				duration: 1,
+				opacity: 1,
+				delay: 0.5
+			}
+		);
+		gsap.fromTo(
+			'.story__content',
+			{ opacity: 0 },
+			{
+				duration: 1,
+				opacity: 1,
+				delay: 0.8
+			}
+		);
 	});
 </script>
 
@@ -65,14 +71,12 @@
 	}
 	.story__title {
 		font-size: 2.5rem;
-		opacity: 0;
 	}
 
 	.story__author {
 		font-size: 1.5rem;
 		font-weight: bold;
 		padding: 1rem 0;
-		opacity: 0;
 	}
 
 	.story__content {
@@ -82,7 +86,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
-		opacity: 0;
 	}
 
 	.story__links {

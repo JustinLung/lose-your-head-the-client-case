@@ -4,9 +4,17 @@
 	import { page } from '$app/stores';
 
 	onMount(() => {
-		gsap.to('.error__title', { opacity: 1, duration: 1.3, ease: 'bounce.out' });
-		gsap.to('.error__message', { opacity: 1, duration: 1.3, delay: 0.3, ease: 'bounce.out' });
-		gsap.to('.error__status', { opacity: 1, y: 0, duration: 1.3, delay: 0.6, ease: 'bounce.out' });
+		gsap.fromTo('.error__title', { opacity: 0 }, { opacity: 1, duration: 1.3, ease: 'bounce.out' });
+		gsap.fromTo(
+			'.error__message',
+			{ opacity: 0 },
+			{ opacity: 1, duration: 1.3, delay: 0.3, ease: 'bounce.out' }
+		);
+		gsap.fromTo(
+			'.error__status',
+			{ opacity: 0, y: -50 },
+			{ opacity: 1, y: 0, duration: 1.3, delay: 0.6, ease: 'bounce.out' }
+		);
 	});
 </script>
 
@@ -39,19 +47,15 @@
 
 	.error__title {
 		font-size: 2rem;
-		opacity: 0;
 	}
 
 	.error__status {
 		font-size: 7rem;
-		opacity: 0;
-		transform: translateY(-50px);
 	}
 
 	.error__message {
 		max-width: 30rem;
 		font-size: 1.2rem;
-		opacity: 0;
 	}
 
 	.error__link {
