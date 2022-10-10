@@ -1,6 +1,13 @@
 <script lang="ts">
+	import gsap from 'gsap';
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import Button from '$lib/components/Button.svelte';
+
+	onMount(() => {
+		gsap.to('.error__title', { opacity: 1, duration: 1.3, ease: 'bounce.out' });
+		gsap.to('.error__message', { opacity: 1, duration: 1.3, delay: 0.3, ease: 'bounce.out' });
+		gsap.to('.error__status', { opacity: 1, y: 0, duration: 1.3, delay: 0.6, ease: 'bounce.out' });
+	});
 </script>
 
 <section class="error">
@@ -13,7 +20,7 @@
 		<a href="/" class="error__link">Go back to stories page</a>
 	{:else}
 		<p class="error__message">
-			It looks like there is something wrong in our end. Please come back later to chack our status.
+			It looks like there is something wrong in our end. Please come back later to check our status.
 		</p>
 		<span class="error__status">{$page.status}</span>
 	{/if}
@@ -32,15 +39,19 @@
 
 	.error__title {
 		font-size: 2rem;
+		opacity: 0;
 	}
 
 	.error__status {
 		font-size: 7rem;
+		opacity: 0;
+		transform: translateY(-50px);
 	}
 
 	.error__message {
 		max-width: 30rem;
 		font-size: 1.2rem;
+		opacity: 0;
 	}
 
 	.error__link {

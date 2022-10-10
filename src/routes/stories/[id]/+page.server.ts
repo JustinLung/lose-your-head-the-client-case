@@ -13,8 +13,7 @@ export const load: PageServerLoad = async ({ params }) => {
                 html
             }
         }
-    }
-    `;
+    }`;
 	const data = await client(query, { id: params.id });
 
 	return {
