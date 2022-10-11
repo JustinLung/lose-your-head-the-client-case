@@ -11,7 +11,7 @@
 	const swing = Math.round(Math.random()) ? 'alternate' : 'alternate-reverse';
 
 	onMount(() => {
-		gsap.fromTo('.story', { opacity: 0 }, { duration: 1, opacity: 1, stagger: 0.3, delay: 0.5 });
+		gsap.fromTo('.story', { opacity: 0 }, { duration: 0.5, opacity: 1, stagger: 0.3, delay: 0.3 });
 	});
 </script>
 
