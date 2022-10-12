@@ -6,9 +6,6 @@
 	import { page } from '$app/stores';
 
 	export let data: PageData;
-	const { story } = data.data;
-
-	const currentId = $page.params.id;
 
 	function getPreviousAndNext(id: string) {
 		const currentIndex = $storyId.indexOf(id);
@@ -17,7 +14,7 @@
 		return [next, previous];
 	}
 
-	const [next, previous] = getPreviousAndNext(currentId);
+	$: [next, previous] = getPreviousAndNext($page.params.id);
 
 	onMount(() => {
 		gsap.fromTo(
@@ -47,20 +44,18 @@
 </script>
 
 <svelte:head>
-	<title>Ilojo Bar - {story.title}</title>
+	<title>Ilojo Bar - {data.title}</title>
 </svelte:head>
 
 <section class="story">
-	<h1 class="story__title">{story.title}</h1>
-	<p class="story__author">Written By: {story.createdBy.name}</p>
+	<h1 class="story__title">{data.title}</h1>
+	<p class="story__author">Written By: {data.createdBy.name}</p>
 	<div class="story__content">
-		{@html story.content.html}
+		{@html data.content.html}
 	</div>
 	<div class="story__links">
-		<a data-sveltekit-reload href={`/stories/${$storyId[previous]}`} class="story__links--link"
-			>Previous</a
-		>
-		<a data-sveltekit-reload href={`/stories/${$storyId[next]}`} class="story__links--link">Next</a>
+		<a href={`/stories/${$storyId[previous]}`} class="story__links--link">Previous</a>
+		<a href={`/stories/${$storyId[next]}`} class="story__links--link">Next</a>
 	</div>
 </section>
 
