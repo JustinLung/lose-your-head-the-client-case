@@ -1,6 +1,7 @@
 import type { LayoutLoad } from './$types';
 import { client } from '../vendors/utils';
 import { storyId } from '$lib/stores/store';
+export const prerender = true;
 
 export const load: LayoutLoad = async ({ fetch }) => {
 	const query = `
