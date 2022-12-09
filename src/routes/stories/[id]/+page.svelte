@@ -54,8 +54,8 @@
 		{@html data.content.html}
 	</div>
 	<div class="story__links">
-		<a href={`/stories/${$storyId[previous]}`} class="story__links--link">Previous</a>
-		<a href={`/stories/${$storyId[next]}`} class="story__links--link">Next</a>
+		<a href={`/stories/${$storyId[previous]}`} class="story__links--link" data-sveltekit-reload>Previous</a>
+		<a href={`/stories/${$storyId[next]}`} class="story__links--link" data-sveltekit-reload>Next</a>
 	</div>
 </section>
 

@@ -17,7 +17,7 @@
 
 {#if top}
 	<article class="story" style="--top: {top}rem; --delay: {250}ms; --swing: {swing}">
-		<a href={storyLink} class="story__link">
+		<a href={storyLink} class="story__link" data-sveltekit-reload>
 			<figure class="story__link__frame">
 				<div class="story__link__frame-content">
 					<img
