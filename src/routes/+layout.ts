@@ -11,6 +11,7 @@ export const load: LayoutLoad = async ({ fetch }) => {
             title
         }
 }`;
+
 	const data = await client({ query, fetch });
 	const ids = data.stories.map((story: any) => story.id);
 
