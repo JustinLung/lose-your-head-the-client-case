@@ -4,7 +4,7 @@
 </script>
 
 <header class="header">
-	<a href="/" class="header__link">
+	<a href="/" class="header__link" data-sveltekit-reload>
 		<img
 			src="/assets/images/logo-ilojo-bar.webp"
 			alt="Logo Ilojo Bar"
