@@ -31,7 +31,6 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
-		"gsap": "^3.11.3",
-		"ilojo-bar-components": "^1.1.2"
+		"gsap": "^3.11.3"
 	}
 }
