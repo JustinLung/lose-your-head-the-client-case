@@ -1,9 +1,9 @@
 <script lang="ts">
-	import '../../styles/style.css';
+	import '../styles/style.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import BackToTop from '$lib/components/BackToTop.svelte';
-	import type { PageData } from './$types';
+	import type { PageData } from './stories/$types';
 
 	export let data: PageData;
 </script>
