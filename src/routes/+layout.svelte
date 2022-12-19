@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../styles/style.css';
 	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import BigFooter from 'ilojo-bar-components/components/BigFooter.svelte';
+	// import Footer from '$lib/components/Footer.svelte';
 	import BackToTop from '$lib/components/BackToTop.svelte';
 	import type { PageData } from './$types';
 
@@ -18,7 +19,7 @@
 	<slot />
 </main>
 <BackToTop />
-<Footer />
+<BigFooter companyName="Legacy"/>
 
 <style>
 	main {

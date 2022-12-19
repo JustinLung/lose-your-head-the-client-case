@@ -1,16 +1,3 @@
-<script lang="ts">
-	import gsap from 'gsap';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		gsap.fromTo(
-			'h1',
-			{ opacity: 0, y: -60 },
-			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
-		);
-	});
-</script>
-
 <section class="stories">
 	<h1 class="stories__title">Discover Untold Stories</h1>
 	<div class="stories__container">
@@ -22,6 +9,7 @@
 	.stories__title {
 		font-size: 3rem;
 		text-align: center;
+		margin: 2rem 0;
 	}
 
 	.stories__container {

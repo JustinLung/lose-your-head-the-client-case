@@ -1,6 +1,4 @@
 <script lang="ts">
-	import gsap from 'gsap';
-	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import { storyId } from '$lib/stores/store';
 	import { page } from '$app/stores';
@@ -15,32 +13,6 @@
 	}
 
 	$: [next, previous] = getPreviousAndNext($page.params.id);
-
-	onMount(() => {
-		gsap.fromTo(
-			'.story__title',
-			{ opacity: 0, y: -50 },
-			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
-		);
-		gsap.fromTo(
-			'.story__author',
-			{ opacity: 0 },
-			{
-				duration: 1,
-				opacity: 1,
-				delay: 0.5
-			}
-		);
-		gsap.fromTo(
-			'.story__content',
-			{ opacity: 0 },
-			{
-				duration: 1,
-				opacity: 1,
-				delay: 0.8
-			}
-		);
-	});
 </script>
 
 <svelte:head>
@@ -108,7 +80,7 @@
 		transform: scale(1.2);
 	}
 
-	:global(img) {
+	:global(.story__content > img) {
 		width: 100%;
 		height: 100%;
 	}

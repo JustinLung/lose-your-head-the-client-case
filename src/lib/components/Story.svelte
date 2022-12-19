@@ -1,40 +1,27 @@
 <script lang="ts">
-	import gsap from 'gsap';
-	import { onMount } from 'svelte';
-
 	export let storyTitle: string = 'Story Image';
 	export let storyImage: string;
 	export let storyLink: string;
-
-	let top: number = Math.random() * 15;
-
-	const swing = Math.round(Math.random()) ? 'alternate' : 'alternate-reverse';
-
-	onMount(() => {
-		gsap.fromTo('.story', { opacity: 0 }, { duration: 0.5, opacity: 1, stagger: 0.3, delay: 0.3 });
-	});
 </script>
 
-{#if top}
-	<article class="story" style="--top: {top}rem; --delay: {250}ms; --swing: {swing}">
-		<a href={storyLink} class="story__link" data-sveltekit-reload>
-			<figure class="story__link__frame">
-				<div class="story__link__frame-content">
-					<img
-						src={storyImage}
-						alt={storyTitle}
-						class="story__link__frame-image"
-						width="244"
-						height="250"
-					/>
-				</div>
-			</figure>
-			<div class="story__link__plate">
-				<h2 class="story__link__plate-title">{storyTitle}</h2>
+<article class="story">
+	<a href={storyLink} class="story__link" data-sveltekit-reload>
+		<figure class="story__link__frame">
+			<div class="story__link__frame-content">
+				<img
+					src={storyImage}
+					alt={storyTitle}
+					class="story__link__frame-image"
+					width="244"
+					height="250"
+				/>
 			</div>
-		</a>
-	</article>
-{/if}
+		</figure>
+		<div class="story__link__plate">
+			<h2 class="story__link__plate-title">{storyTitle}</h2>
+		</div>
+	</a>
+</article>
 
 <style>
 	.story__link {
@@ -45,18 +32,8 @@
 		max-width: 20rem;
 		width: 100%;
 		margin: var(--top) 0 0;
-		animation: swing ease-in-out 2s var(--swing) infinite;
 		animation-delay: var(--delay);
 		transform-origin: top center;
-	}
-
-	@keyframes swing {
-		0% {
-			transform: rotate(1.75deg);
-		}
-		100% {
-			transform: rotate(-1.75deg);
-		}
 	}
 
 	.story__link__frame {
