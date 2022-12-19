@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { client } from '../vendors/utils';
+import { client } from '../../vendors/utils';
 
 export const load: PageServerLoad = async () => {
 	const query = `
