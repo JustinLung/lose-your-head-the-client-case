@@ -2,6 +2,7 @@
 	import StorySection from '$lib/components/StorySection.svelte';
 	import Story from '$lib/components/Story.svelte';
 	import type { PageData } from './$types';
+	import StoryAlt from '$lib/components/StoryAlt.svelte';
 
 	export let data: PageData;
 	const pageTitle = 'Stories';
@@ -13,7 +14,7 @@
 
 <StorySection>
 	{#each data.stories as story}
-		<Story
+		<StoryAlt
 			storyTitle={story.title}
 			storyImage={story.thumbnail.url}
 			storyLink="/stories/{story.id}"
