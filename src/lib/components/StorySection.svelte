@@ -16,6 +16,8 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+		gap: 2rem;
+		gap: 2rem;
 	}
 
 	@media (max-width: 50rem) {
