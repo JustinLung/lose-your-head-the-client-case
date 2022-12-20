@@ -13,18 +13,14 @@
 		<a data-sveltekit-reload href="/stories/{story.id}" class="nav-link">{story.title}</a>
 	{/each}
 </Header>
-<main>
-	<slot />
-</main>
+<slot />
 
 <Footer companyName="Legacy">
 	{#each data.stories as story}
 		<a data-sveltekit-reload href="/stories/{story.id}" class="footer-link">{story.title}</a>
 	{/each}
 </Footer>
-
 <style>
-
 	.nav-link {
 		position: relative;
 		color: var(--color-white);
@@ -61,5 +57,4 @@
 	.footer-link:hover::after {
 		transform: scaleX(1);
 	}
-
 </style>

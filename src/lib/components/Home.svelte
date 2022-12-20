@@ -8,16 +8,6 @@
 		gsap.registerPlugin(ScrollTrigger);
 		let tl = gsap.timeline();
 
-		tl.fromTo(
-			'.logo',
-			{ opacity: 0, y: -50 },
-			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
-		).fromTo(
-			'.subtitle',
-			{ opacity: 0, y: -50 },
-			{ opacity: 1, y: 0, duration: 1.3, ease: 'bounce.out' }
-		);
-
 		let scrollTL = gsap.timeline({
 			scrollTrigger: {
 				trigger: 'section',
@@ -30,7 +20,6 @@
 		});
 
 		scrollTL
-			.fromTo('.scroll_btn', { opacity: 1, duration: 0.3 }, { opacity: 0 })
 			.from('.scroll_cont', { scale: 1 }, '<')
 			.fromTo('#color_building', { opacity: 0 }, { opacity: 1 }, '<')
 			.fromTo('#background', { opacity: 1 }, { opacity: 0 }, '-=50%')
