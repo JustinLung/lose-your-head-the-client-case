@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HomeHeader from './HomeHeader.svelte';
 	import { gsap } from 'gsap/dist/gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
@@ -37,28 +38,17 @@
 	});
 </script>
 
-<header class="home">
-	<img src="/assets/images/logo-ilojo-bar.webp" alt="Logo Ilojo bar" class="logo" />
-	<p class="subtitle">Discover the stories of Ilojo Bar</p>
-</header>
-
+<HomeHeader />
 <main>
 	<section>
 		<div class="scroll_cont">
-			<img
-				src="/assets/images/ilojo_bar_bw_2.png"
-				alt="Colored Ilojo bar"
-			/>
+			<img src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" />
 			<img
 				id="background"
 				src="/assets/images/ilojo_bar_bw_1.jpg"
 				alt="Ilojo bar old with environment"
 			/>
-			<img
-				id="color_building"
-				src="/assets/images/ilojo_bar_bw_2.png"
-				alt="Colored Ilojo bar"
-			/>
+			<img id="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" />
 			<img
 				id="overlay"
 				src="/assets/images/ilojo_bar_bw_3.png"
@@ -69,39 +59,6 @@
 </main>
 
 <style>
-	header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 0;
-	}
-
-	header p {
-		margin: 1.4em 1em;
-		font-size: 1.4em;
-		text-shadow: 0 0 5px rgb(0 0 0 / 0.4);
-		text-align: center;
-	}
-
-	header p  {
-		display: inline-block;
-		overflow: hidden;
-		padding: 5px 5px;
-	}
-
-	header img {
-		height: 5.5em;
-		width: auto;
-		margin-top: 3em;
-		filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
-		transform-origin: top right;
-	}
-
 	main {
 		padding: 0;
 		overflow: hidden;

@@ -31,9 +31,11 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 80rem;
 		margin: 0 auto;
-		padding: 2rem 0 0;
+		padding: 2rem 4rem;
+		position: fixed;
+		z-index: 99;
+		width: 100%;
 	}
 
 	.header__nav {
