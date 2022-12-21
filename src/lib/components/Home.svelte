@@ -14,7 +14,6 @@
 				end: '+=100%',
 				scrub: true,
 				pin: '.ilojo-bar-section',
-				// snap: 1
 			}
 		});
 
