@@ -16,9 +16,10 @@
 					height="250"
 				/>
 			</div>
-			<img src="/assets/images/window_R.png" alt="Window Right" class="window-door">
-			<img src="/assets/images/window_L.png" alt="Window Left" class="window-door">
-
+			<div class="window-doors-container">
+				<img src="/assets/images/window_L.png" alt="Window Left" class="window-door window_L" />
+				<img src="/assets/images/window_R.png" alt="Window Left" class="window-door window_R" />
+			</div>
 		</figure>
 		<div class="story__link__plate">
 			<h2 class="story__link__plate-title">{storyTitle}</h2>
@@ -33,6 +34,17 @@
 
 	.window-door {
 		position: absolute;
+		top: 0;
+		left: 0;
+		transition: transform 1s ease, filter 1s ease;
+	}
+
+	.window_L {
+		transform-origin: 16.28%;
+	}
+
+	.window_R {
+		transform-origin: 86.04%;
 	}
 
 	.story {
@@ -42,6 +54,18 @@
 		margin: var(--top) 0 0;
 		animation-delay: var(--delay);
 		transform-origin: top center;
+	}
+
+	.story:hover .window_L {
+		transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
+		-webkit-filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.2));
+		filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.2));
+	}
+
+	.story:hover .window_R {
+		transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+		-webkit-filter: drop-shadow(-10px 6px 5px rgba(0, 0, 0, 0.2));
+		filter: drop-shadow(-10px 6px 5px rgba(0, 0, 0, 0.2));
 	}
 
 	.story__link__frame {
@@ -54,6 +78,16 @@
 		position: relative;
 		overflow: hidden;
 		max-width: 25rem;
+	}
+
+	.window-doors-container {
+		width: 71%;
+		height: 51%;
+		position: absolute;
+		top: 68%;
+		left: 32%;
+		transform: translate(-50%, -150%);
+		z-index: 2;
 	}
 
 	.story__link__frame-content {

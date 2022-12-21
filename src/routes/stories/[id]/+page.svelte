@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Story from '$lib/components/Story.svelte';
 	import type { PageData } from './$types';
 	import { storyId } from '$lib/stores/store';
 	import { page } from '$app/stores';
@@ -19,8 +18,6 @@
 <svelte:head>
 	<title>Ilojo Bar - {data.title}</title>
 </svelte:head>
-
-<Story />
 
 <section class="story">
 	<h1 class="story__title">{data.title}</h1>
