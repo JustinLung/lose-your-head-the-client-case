@@ -6,16 +6,15 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		let tl = gsap.timeline();
 
 		let scrollTL = gsap.timeline({
 			scrollTrigger: {
-				trigger: 'section',
+				trigger: '.ilojo-bar-section',
 				start: 'top top',
-				end: 'bottom top',
-				scrub: 1,
-				pin: true,
-				snap: 1
+				end: '+=100%',
+				scrub: true,
+				pin: '.ilojo-bar-section',
+				// snap: 1
 			}
 		});
 
@@ -29,7 +28,7 @@
 
 <HomeHeader />
 <main>
-	<section>
+	<section class="ilojo-bar-section">
 		<div class="scroll_cont">
 			<img src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" />
 			<img
