@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Story from '$lib/components/Story.svelte';
 	import type { PageData } from './$types';
 	import { storyId } from '$lib/stores/store';
 	import { page } from '$app/stores';
@@ -19,6 +20,8 @@
 	<title>Ilojo Bar - {data.title}</title>
 </svelte:head>
 
+<Story />
+
 <section class="story">
 	<h1 class="story__title">{data.title}</h1>
 	<p class="story__author">Written By: {data.createdBy.name}</p>
@@ -26,7 +29,9 @@
 		{@html data.content.html}
 	</div>
 	<div class="story__links">
-		<a href={`/stories/${$storyId[previous]}`} class="story__links--link" data-sveltekit-reload>Previous</a>
+		<a href={`/stories/${$storyId[previous]}`} class="story__links--link" data-sveltekit-reload
+			>Previous</a
+		>
 		<a href={`/stories/${$storyId[next]}`} class="story__links--link" data-sveltekit-reload>Next</a>
 	</div>
 </section>

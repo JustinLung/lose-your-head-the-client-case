@@ -16,6 +16,9 @@
 					height="250"
 				/>
 			</div>
+			<img src="/assets/images/window_R.png" alt="Window Right" class="window-door">
+			<img src="/assets/images/window_L.png" alt="Window Left" class="window-door">
+
 		</figure>
 		<div class="story__link__plate">
 			<h2 class="story__link__plate-title">{storyTitle}</h2>
@@ -28,7 +31,12 @@
 		text-decoration: none;
 	}
 
+	.window-door {
+		position: absolute;
+	}
+
 	.story {
+		position: relative;
 		max-width: 20rem;
 		width: 100%;
 		margin: var(--top) 0 0;
