@@ -2,8 +2,95 @@
 	import type { PageData } from './$types';
 	import { storyId } from '$lib/stores/store';
 	import { page } from '$app/stores';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { onMount } from 'svelte';
 
 	export let data: PageData;
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.from('.story__title', {
+			delay: 0.25,
+			yPercent: 100,
+			ease: 'back.out',
+			duration: 1.5
+		});
+
+			gsap.from('.story__content p', {
+				delay: .5,
+				x: -800,
+				ease: "back.out(1)",
+				duration: 3,
+			});
+	});
+	// onMount(() => {
+	// 	gsap.registerPlugin(ScrollTrigger)
+	// 	gsap.from("h1 span", {
+	// 		delay: .25,
+	// 		yPercent: 100,
+	// 		ease: "back.out",
+	// 		duration: 1.5
+	// 	});
+
+	// 	gsap.from('.story__content p:not(.block-img):nth-child(1)', {
+	// 		delay: .5,
+	// 		x: -800,
+	// 		ease: "back.out(1)",
+	// 		duration: 3,
+	// 	});
+
+	// 	gsap.from('.block-img:nth-child(2)', {
+	// 		delay: .75,
+	// 		x: 800,
+	// 		ease: "back.out(1)",
+	// 		duration: 3,
+	// 	});
+
+	// 	gsap.from('.block-img:nth-child(3)', {
+	// 		scrollTrigger: {
+	// 			trigger: '.block-img:nth-child(3)',
+	// 			toggleActions:"restart none restart restart"
+	// 		},
+	// 		delay: .20,
+	// 		x: -100,
+	// 		ease: "back.out(1)",
+	// 		duration: 1.25,
+	// 	});
+
+	// 	gsap.from('.story__content p:not(.block-img):nth-child(4)', {
+	// 		scrollTrigger: {
+	// 			trigger: '.story__content p:not(.block-img):nth-child(4)',
+	// 			toggleActions:"restart none restart restart"
+	// 		},
+	// 		delay: .2,
+	// 		x: 100,
+	// 		ease: "back.out(1)",
+	// 		duration: 1.25,
+	// 	});
+
+	// 	gsap.from('.block-img:nth-child(5)', {
+	// 		scrollTrigger: {
+	// 			trigger: '.block-img:nth-child(5)',
+	// 			toggleActions:"restart none"
+	// 		},
+	// 		delay: .2,
+	// 		x: -100,
+	// 		ease: "back.out(1)",
+	// 		duration: 1.25,
+	// 	});
+
+	// 	gsap.from('.block-img:nth-child(6)', {
+	// 		scrollTrigger: {
+	// 			trigger: '.block-img:nth-child(6)',
+	// 			toggleActions:"restart none"
+	// 		},
+	// 		delay: .2,
+	// 		x: 65,
+	// 		ease: "back.out(1)",
+	// 		duration: 1.25,
+	// 	});
+	// });
 
 	function getPreviousAndNext(id: string) {
 		const currentIndex = $storyId.indexOf(id);
