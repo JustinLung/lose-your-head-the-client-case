@@ -10,87 +10,137 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		gsap.from('.story__title', {
+		gsap.from('.story__title span, .story__author span', {
 			delay: 0.25,
 			yPercent: 100,
 			ease: 'back.out',
 			duration: 1.5
 		});
 
-			gsap.from('.story__content p', {
-				delay: .5,
-				x: -800,
-				ease: "back.out(1)",
-				duration: 3,
-			});
+		gsap.from('.story__content *:nth-child(1)', {
+			delay: .5,
+			x: -900,
+			ease: "back.out(.6)",
+			duration: 3,
+		});
+
+		gsap.from('.story__content *:nth-child(2)', {
+			delay: .75,
+			x: 900,
+			ease: "back.out(.6)",
+			duration: 3,
+		});
+
+		gsap.from('.story__content *:nth-child(3)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(3)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: -100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(4)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(4)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: 100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(5)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(5)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: -100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(6)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(6)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: 100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(7)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(7)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: -100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(8)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(8)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: 100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(9)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(9)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: -100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(10)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(10)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: 100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(11)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(11)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: -100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
+
+		gsap.from('.story__content *:nth-child(12)', {
+			scrollTrigger: {
+				trigger: '.story__content *:nth-child(12)',
+				toggleActions:"restart none restart restart"
+			},
+			delay: .2,
+			x: 100,
+			ease: "back.out(1)",
+			duration: 1.25,
+		});
 	});
-	// onMount(() => {
-	// 	gsap.registerPlugin(ScrollTrigger)
-	// 	gsap.from("h1 span", {
-	// 		delay: .25,
-	// 		yPercent: 100,
-	// 		ease: "back.out",
-	// 		duration: 1.5
-	// 	});
-
-	// 	gsap.from('.story__content p:not(.block-img):nth-child(1)', {
-	// 		delay: .5,
-	// 		x: -800,
-	// 		ease: "back.out(1)",
-	// 		duration: 3,
-	// 	});
-
-	// 	gsap.from('.block-img:nth-child(2)', {
-	// 		delay: .75,
-	// 		x: 800,
-	// 		ease: "back.out(1)",
-	// 		duration: 3,
-	// 	});
-
-	// 	gsap.from('.block-img:nth-child(3)', {
-	// 		scrollTrigger: {
-	// 			trigger: '.block-img:nth-child(3)',
-	// 			toggleActions:"restart none restart restart"
-	// 		},
-	// 		delay: .20,
-	// 		x: -100,
-	// 		ease: "back.out(1)",
-	// 		duration: 1.25,
-	// 	});
-
-	// 	gsap.from('.story__content p:not(.block-img):nth-child(4)', {
-	// 		scrollTrigger: {
-	// 			trigger: '.story__content p:not(.block-img):nth-child(4)',
-	// 			toggleActions:"restart none restart restart"
-	// 		},
-	// 		delay: .2,
-	// 		x: 100,
-	// 		ease: "back.out(1)",
-	// 		duration: 1.25,
-	// 	});
-
-	// 	gsap.from('.block-img:nth-child(5)', {
-	// 		scrollTrigger: {
-	// 			trigger: '.block-img:nth-child(5)',
-	// 			toggleActions:"restart none"
-	// 		},
-	// 		delay: .2,
-	// 		x: -100,
-	// 		ease: "back.out(1)",
-	// 		duration: 1.25,
-	// 	});
-
-	// 	gsap.from('.block-img:nth-child(6)', {
-	// 		scrollTrigger: {
-	// 			trigger: '.block-img:nth-child(6)',
-	// 			toggleActions:"restart none"
-	// 		},
-	// 		delay: .2,
-	// 		x: 65,
-	// 		ease: "back.out(1)",
-	// 		duration: 1.25,
-	// 	});
-	// });
 
 	function getPreviousAndNext(id: string) {
 		const currentIndex = $storyId.indexOf(id);
@@ -107,41 +157,47 @@
 </svelte:head>
 
 <section class="story">
-	<h1 class="story__title">{data.title}</h1>
-	<p class="story__author">Written By: {data.createdBy.name}</p>
+	<h1 class="story__title"><span>{data.title}</span></h1>
+	<p class="story__author"><span>Written By: {data.createdBy.name}</span></p>
 	<div class="story__content">
 		{@html data.content.html}
 	</div>
 	<div class="story__links">
-		<a href={`/stories/${$storyId[previous]}`} class="story__links--link" data-sveltekit-reload
-			>Previous</a
-		>
+		<a href={`/stories/${$storyId[previous]}`} class="story__links--link" data-sveltekit-reload>Previous</a>
 		<a href={`/stories/${$storyId[next]}`} class="story__links--link" data-sveltekit-reload>Next</a>
 	</div>
 </section>
 
 <style>
 	.story {
-		max-width: 40rem;
-		margin: 0 auto;
+		padding: 9em 1em;
 	}
+
 	.story__title {
 		font-size: 2.5rem;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.story__title span,
+	.story__author span {
+    display: block;
 	}
 
 	.story__author {
 		font-size: 1.5rem;
 		font-weight: bold;
-		padding: 1rem 0;
+		padding: 1rem 0 4rem 0;
+		text-align: center;
+		overflow: hidden;
 	}
 
 	.story__content {
 		font-size: 1.2rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		gap: 2rem;
 	}
 
 	.story__links {
@@ -157,8 +213,7 @@
 		border-radius: 0.7rem;
 		padding: 1rem 2rem;
 		filter: contrast(110%) brightness(100%);
-		background: linear-gradient(40deg, rgba(195, 165, 128, 1), rgba(0, 0, 0, 0)),
-			url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		background: var(--link-background);
 		color: var(--color-white);
 		box-shadow: var(--box-shadow);
 		text-decoration: none;
@@ -171,6 +226,22 @@
 
 	:global(.story__content > img) {
 		width: 100%;
-		height: 100%;
+    height: 20em;
+		object-fit: cover;
+		object-position: left top;
+	}
+
+	:global(.story__content > p:not(:last-child), img:not(:last-child)) {
+		margin-bottom: 8em;
+	}
+
+	@media (min-width: 70em) {
+		.story {
+			padding: 9em 20em;
+		}
+
+		.story__content {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 </style>
