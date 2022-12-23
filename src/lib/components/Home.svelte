@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HomeHeader from './HomeHeader.svelte';
-	import { gsap } from 'gsap/dist/gsap';
+	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
