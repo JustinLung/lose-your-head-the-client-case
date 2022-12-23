@@ -3,16 +3,8 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
-	import { onMount } from 'svelte';
 
 	export let data: PageData;
-
-	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-	});
 </script>
 
 <Header>

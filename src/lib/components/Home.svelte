@@ -1,18 +1,18 @@
 <script lang="ts">
 	import HomeHeader from './HomeHeader.svelte';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-
+		gsap.registerPlugin(ScrollTrigger);
 		let scrollTL = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.ilojo-bar-section',
 				start: 'top top',
 				end: '+=100%',
 				scrub: true,
-				pin: '.ilojo-bar-section',
+				pin: '.ilojo-bar-section'
 			}
 		});
 
