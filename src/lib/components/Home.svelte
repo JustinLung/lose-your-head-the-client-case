@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HomeHeader from './HomeHeader.svelte';
+	import Plate from './Plate.svelte';
 	import { gsap } from 'gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
@@ -82,5 +83,11 @@
 	#overlay,
 	#color_building {
 		opacity: 0;
+	}
+
+	@media(max-width:55rem) {
+		section img {
+			object-position: 62% center !important;
+		}
 	}
 </style>

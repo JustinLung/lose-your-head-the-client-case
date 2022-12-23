@@ -1,5 +1,5 @@
 <section>
-	<h2>Welcome to the Stories of Ilojo Bar</h2>
+	<h2>Welcome to the <br /> Stories of Ilojo Bar</h2>
 	<p>Read exciting stories about Ilojo Bar</p>
 </section>
 
@@ -20,5 +20,18 @@
 
 	p {
 		font-size: 1.5rem;
+	}
+
+	@media (max-width: 55rem) {
+		h2 {
+			font-size: 2rem;
+			white-space: nowrap;
+			line-height: 2.5rem;
+		}
+
+		p {
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+		}
 	}
 </style>

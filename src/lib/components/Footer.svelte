@@ -46,7 +46,6 @@
 		font-size: 1.2rem;
 		line-height: 1.5;
 		text-decoration: none;
-		width: fit-content;
 	}
 
 	.footer-link::after {

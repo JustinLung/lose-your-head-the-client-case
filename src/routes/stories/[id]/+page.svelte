@@ -192,7 +192,8 @@
 	}
 
 	.story__content {
-		font-size: 1.2rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
 		display: grid;
 		grid-template-columns: 1fr;
 		justify-items: center;
