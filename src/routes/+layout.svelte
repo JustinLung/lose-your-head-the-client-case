@@ -3,13 +3,16 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
+	import { onMount } from 'svelte';
 
 	export let data: PageData;
 
-	import gsap from 'gsap'
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+	import gsap from 'gsap';
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger)
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+	});
 </script>
 
 <Header>
@@ -25,6 +28,7 @@
 		<a data-sveltekit-reload href="/stories/{story.id}" class="footer-link">{story.title}</a>
 	{/each}
 </Footer>
+
 <style>
 	.nav-link {
 		position: relative;
