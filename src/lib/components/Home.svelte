@@ -5,7 +5,6 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
 
 		let scrollTL = gsap.timeline({
 			scrollTrigger: {

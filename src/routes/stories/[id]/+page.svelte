@@ -9,7 +9,6 @@
 	export let data: PageData;
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
 		gsap.from('.story__title span, .story__author span', {
 			delay: 0.25,
 			yPercent: 100,

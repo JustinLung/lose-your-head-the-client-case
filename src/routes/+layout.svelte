@@ -5,6 +5,11 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	import gsap from 'gsap'
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+	gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <Header>
